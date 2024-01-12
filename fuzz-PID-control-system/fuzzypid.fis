@@ -1,0 +1,123 @@
+[System]
+Name='fuzzypid'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=3
+NumRules=49
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-6 6]
+NumMFs=7
+MF1='EOR-1':'gaussmf',[0.8493 -6]
+MF2='EOR-2':'gaussmf',[0.849 -4.00693641618497]
+MF3='EOR-3':'gaussmf',[0.8493 -2]
+MF4='EOR-4':'gaussmf',[0.8493 0]
+MF5='EOR-5':'gaussmf',[0.8493 2]
+MF6='EOR-6':'gaussmf',[0.8493 4]
+MF7='EOR-7':'gaussmf',[0.8493 6]
+
+[Input2]
+Name='input2'
+Range=[-6 6]
+NumMFs=7
+MF1='RT-ERR-1':'gaussmf',[0.85 -6]
+MF2='RT-ERR-2':'gaussmf',[0.8494 -4]
+MF3='RT-ERR-3':'gaussmf',[0.8494 -2]
+MF4='RT-ERR-4':'gaussmf',[0.8494 0]
+MF5='RT-ERR-5':'gaussmf',[0.8494 2]
+MF6='RT-ERR-6':'gaussmf',[0.8494 4]
+MF7='RT-ERR-7':'gaussmf',[0.8494 6]
+
+[Output1]
+Name='output1'
+Range=[-6 6]
+NumMFs=7
+MF1='KPRP-1':'gaussmf',[0.8496 -6]
+MF2='KPRP-2':'gaussmf',[0.85 -4]
+MF3='KPRP-3':'gaussmf',[0.8494 -2]
+MF4='KPRP-4':'gaussmf',[0.8494 0]
+MF5='KPRP-5':'gaussmf',[0.8494 2]
+MF6='KPRP-6':'gaussmf',[0.8494 4]
+MF7='KPRP-7':'gaussmf',[0.8494 6]
+
+[Output2]
+Name='output2'
+Range=[-6 6]
+NumMFs=7
+MF1='KINTG-1':'gaussmf',[0.8494 -6]
+MF2='KINTG-2':'gaussmf',[0.8494 -4]
+MF3='KINTG-3':'gaussmf',[0.8494 -2]
+MF4='KINTG-4':'gaussmf',[0.8494 0]
+MF5='KINTG-5':'gaussmf',[0.8494 2]
+MF6='KINTG-6':'gaussmf',[0.8494 4]
+MF7='KINTG-7':'gaussmf',[0.8494 6]
+
+[Output3]
+Name='output3'
+Range=[-6 6]
+NumMFs=7
+MF1='KDERV-1':'gaussmf',[0.8494 -6]
+MF2='KDERV-2':'gaussmf',[0.8494 -4]
+MF3='KDERV-3':'gaussmf',[0.8494 -2]
+MF4='KDERV-4':'gaussmf',[0.8494 0]
+MF5='KDERV-5':'gaussmf',[0.8494 2]
+MF6='KDERV-6':'gaussmf',[0.8494 4]
+MF7='KDERV-7':'gaussmf',[0.8494 6]
+
+[Rules]
+1 1, 7 1 5 (1) : 1
+1 2, 7 1 5 (1) : 1
+1 3, 6 1 4 (1) : 1
+1 4, 6 2 4 (1) : 1
+1 5, 5 2 4 (1) : 1
+1 6, 5 4 7 (1) : 1
+1 7, 4 4 7 (1) : 1
+2 1, 7 1 3 (1) : 1
+2 2, 7 1 3 (1) : 1
+2 3, 6 2 3 (1) : 1
+2 4, 6 2 3 (1) : 1
+2 5, 5 3 4 (1) : 1
+2 6, 4 4 3 (1) : 1
+2 7, 4 4 6 (1) : 1
+3 1, 6 2 1 (1) : 1
+3 2, 6 2 1 (1) : 1
+3 3, 6 3 2 (1) : 1
+3 4, 5 3 3 (1) : 1
+3 5, 4 4 4 (1) : 1
+3 6, 3 5 5 (1) : 1
+3 7, 2 5 6 (1) : 1
+4 1, 6 2 1 (1) : 1
+4 2, 5 3 2 (1) : 1
+4 3, 5 3 2 (1) : 1
+4 4, 4 4 3 (1) : 1
+4 5, 3 5 4 (1) : 1
+4 6, 2 5 5 (1) : 1
+4 7, 2 6 6 (1) : 1
+5 1, 5 3 1 (1) : 1
+5 2, 5 3 2 (1) : 1
+5 3, 4 4 3 (1) : 1
+5 4, 3 5 3 (1) : 1
+5 5, 3 5 4 (1) : 1
+5 6, 2 6 5 (1) : 1
+5 7, 2 6 5 (1) : 1
+6 1, 4 4 2 (1) : 1
+6 2, 4 4 3 (1) : 1
+6 3, 3 5 3 (1) : 1
+6 4, 2 6 3 (1) : 1
+6 5, 2 6 4 (1) : 1
+6 6, 2 7 5 (1) : 1
+6 7, 1 7 5 (1) : 1
+7 1, 4 4 5 (1) : 1
+7 2, 3 4 4 (1) : 1
+7 3, 3 5 4 (1) : 1
+7 4, 2 6 4 (1) : 1
+7 5, 2 7 4 (1) : 1
+7 6, 1 7 7 (1) : 1
+7 7, 1 7 7 (1) : 1
